@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="#">  <!--  favicon.ico:1 GET http://127.0.0.1:5500/favicon.ico 404 (Not Found) -->
+    <title>Video Player</title>
+</head>
+<body>    
+    <div class="overlay"></div>
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <div class="container">
+        <video class="video" src="media/video.mp4" loop autoplay muted></video> 
+        <div class="btn">
+            <a href="" id="play">Play</a> 
+            <a href="" id="pause">Pause</a>
+            <span class="slider"></span>
+        </div> 
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

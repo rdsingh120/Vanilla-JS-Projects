@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    background-color: white;
+}
+
+#container {
+    background-color: #f1f5f8;
+    height: 100vh;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+}
+#heading>h1 {
+    background-color: #f1f5f8;
+}
+
+span.underline {
+    background-color: #f1f5f8;
+    border-bottom: 3px solid rgb(243, 6, 69);
+    padding-bottom: 5px;
+}
+
+#review-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#description {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#name {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+#position {
+   font-size: 20px; 
+   color: rgb(243, 6, 69);
+
+}
+
+p {
+    margin-top: 15px;
+    color: rgb(79, 4, 24);
+    padding: 0 20px;
+}
+
+#image {
+    border-radius: 50%;
+    width: 150px;
+    transition: .3s;
+}
+#image:hover {
+    width: 170px;
+}
+
+.arrow-btn {
+    display: flex; 
+    justify-content: center;
+    gap: 25px;
+}
+
+.btn {
+    border: none;
+    font-size: 35px;
+    color: rgb(243, 6, 69);
+    cursor: pointer;
+}
+
+#surprise {
+    margin-top: 10px;
+    border: 2px solid;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(255, 242, 243);
+    transition: .3s;
+}
+
+#surprise:hover {
+    background-color: rgb(243, 6, 69);
+    color: rgb(255, 242, 243);
+}
