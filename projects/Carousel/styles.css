@@ -24,7 +24,7 @@ span.underline {
     padding-bottom: 5px;
 }
 
-#review-card {
+#card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -95,4 +95,10 @@ p {
 #surprise:hover {
     background-color: rgb(243, 6, 69);
     color: rgb(255, 242, 243);
+}
+
+@media only screen and (max-width: 850px) {
+    #card {
+        margin: 50px 20px;
+    }
 }
