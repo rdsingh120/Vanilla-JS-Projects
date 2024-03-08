@@ -20,15 +20,35 @@ function createImage() {
 createImage();
 
 var counter = 1200;
-document.querySelector('.btn').addEventListener('click', function(e) {
+
+document.querySelector('.btn-prev').addEventListener('click', function(e) {
     e.preventDefault();
+
+        counter -= 1200
+        if (counter == 0) {
+            counter = (images.length * 1200) - 1200;
+        }
+
+        console.log('counter', counter)
+        for (var i = 0; i < images.length; i++) {
+            document.querySelectorAll(".img")[i].style.right = `${counter}px`
+        }
     
+});
+
+document.querySelector('.btn-next').addEventListener('click', function(e) {
+    e.preventDefault();
+        
+    if (counter == images.length * 1200) {
+        counter = 0;
+    }
+    console.log('0', counter);
     for (var i = 0; i < images.length; i++) {
         document.querySelectorAll(".img")[i].style.right = `${counter}px`
     }
     counter += 1200;
-    if (counter == images.length * 1200) {
-        counter = 0;
-    }
+    
+    console.log('1', counter);
+
 });
 

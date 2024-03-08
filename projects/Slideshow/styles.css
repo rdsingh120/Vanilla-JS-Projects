@@ -38,6 +38,7 @@ body {
     transition: 1s;
     position: relative;
     object-fit: cover;
+    right: 0px;
 }
 
 
