@@ -55,13 +55,10 @@ main {
     flex-direction: column;
     align-items: center;
     flex-basis: 30%;
-    min-width: 350px;
-    margin: 50px auto;
-    overflow: hidden;
+    margin: 25px auto;
 }
 
 .card {
-    overflow: hidden; 
     transition: transform .3s;
     border-radius: 5px;
 }
@@ -81,7 +78,7 @@ main {
     height: 200px;
     width: 100%;
     display: block;
-    filter: blur(1.5px) !important;
+    filter: blur(1px) !important;
 }
 
 footer {
