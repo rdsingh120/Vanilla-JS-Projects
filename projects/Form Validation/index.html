@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>Form Validation</title>
+</head>
+<body>
+    <form name="registration-form" action="">
+        <h1 class="title">Registration</h1>
+        <label for="username">Username</label>
+        <input type="text" placeholder="Enter Username" id="username">
+        <div class="error-container">
+            <span class="error username-error">Username must be at least 4 characters</span>
+        </div>
+        <label for="email">Email</label>
+        <input type="email" placeholder="Enter Email" id="email">
+        <div class="error-container">
+            <span class="error email-error">Email is required</span>
+        </div>
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter Password" id="password">
+        <div class="error-container">
+            <span class="error password-error">Password must be at least 3 characters</span>
+        </div>
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" placeholder="Enter Password Again" id="confirm-password">
+        <div class="error-container">
+            <span class="error confirm-password-error">Password doesn't match</span>
+        </div>
+        <input type="submit" class="btn">
+    </form>
+</body>
+<script src="script.js"></script>
+</html>
