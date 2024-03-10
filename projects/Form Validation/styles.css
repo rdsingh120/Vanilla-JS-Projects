@@ -10,13 +10,27 @@
     border-radius: 5px;
 }
 
+.msg {
+    padding: 25px;
+    text-align: center;
+}
+
+body {
+    background-color: #f0f2f5;
+}
+
+.container {
+    padding: 0 20px;
+}
+
 form {
     display: flex;
     flex-direction: column;
     max-width: 400px;
-    margin: 100px auto;
+    margin: 50px auto;
     padding: 40px;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    background-color: #fff;
 }
 
 .title {
@@ -39,12 +53,11 @@ input {
 .error-container {
     height: 19px;
     overflow: hidden;
-    margin-bottom: 5px;
     display: flex;
 }
 
 .error {
-    font-size: 12px;
+    font-size: 10px;
     color: red;
     visibility: hidden;
     font-style: italic;

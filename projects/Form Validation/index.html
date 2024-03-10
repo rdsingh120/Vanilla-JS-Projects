@@ -9,30 +9,32 @@
     <title>Form Validation</title>
 </head>
 <body>
-    <form name="registration-form" action="">
-        <h1 class="title">Registration</h1>
-        <label for="username">Username</label>
-        <input type="text" placeholder="Enter Username" id="username">
-        <div class="error-container">
-            <span class="error username-error">Username must be at least 4 characters</span>
-        </div>
-        <label for="email">Email</label>
-        <input type="email" placeholder="Enter Email" id="email">
-        <div class="error-container">
-            <span class="error email-error">Email is required</span>
-        </div>
-        <label for="password">Password</label>
-        <input type="password" placeholder="Enter Password" id="password">
-        <div class="error-container">
-            <span class="error password-error">Password must be at least 3 characters</span>
-        </div>
-        <label for="confirm-password">Confirm Password</label>
-        <input type="password" placeholder="Enter Password Again" id="confirm-password">
-        <div class="error-container">
-            <span class="error confirm-password-error">Password doesn't match</span>
-        </div>
-        <input type="submit" class="btn">
-    </form>
+    <div class="container">
+        <form name="registration-form" action="/signin.html">
+            <h1 class="title">Registration</h1>
+            <label for="username">Username</label>
+            <input type="text" placeholder="Enter Username" id="username">
+            <div class="error-container">
+                <span class="error username-error">Username must be at least 4 characters</span>
+            </div>
+            <label for="email">Email</label>
+            <input type="email" placeholder="Enter Email" id="email">
+            <div class="error-container">
+                <span class="error email-error"> Email is not Valid</span>
+            </div>
+            <label for="password">Password</label>
+            <input type="password" placeholder="Enter Password" id="password">
+            <div class="error-container">
+                <span class="error password-error">Password must be at least 8 characters</span>
+            </div>
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" placeholder="Enter Password Again" id="confirm-password">
+            <div class="error-container">
+                <span class="error confirm-password-error">Password doesn't match</span>
+            </div>
+            <input type="submit" class="btn">
+        </form>
+    </div>
 </body>
 <script src="script.js"></script>
 </html>
