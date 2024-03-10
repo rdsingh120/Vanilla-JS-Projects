@@ -27,7 +27,7 @@ form {
     display: flex;
     flex-direction: column;
     max-width: 400px;
-    margin: 50px auto;
+    margin: 120px auto;
     padding: 40px;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
     background-color: #fff;
@@ -38,8 +38,6 @@ form {
     letter-spacing: 5px;
     margin-bottom: 20px;
     
-}
-label {
 }
 
 input {
