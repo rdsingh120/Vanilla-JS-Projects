@@ -1,5 +1,10 @@
 var projects = [
     {
+        name: "Form Validation",
+        image: "images/form.png",
+        link: "projects/Form Validation/index.html"
+    },
+    {
         name: "Slideshow",
         image: "images/slideshow.png",
         link: "projects/Slideshow/index.html"
