@@ -83,14 +83,13 @@ body {
 
 
 
-
 /* display lines */
 
 .line {
     position: absolute;
     top: 0px;
     width: .1px;
-    background-color: #80976e;
+    background-color: #849b71;
     height: 130px; 
 }
 
