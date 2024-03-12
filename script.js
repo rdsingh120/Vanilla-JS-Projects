@@ -113,4 +113,9 @@ const addProject = (array) => {
     })
 }
 
+const updateNumber = (num) => {
+    document.querySelector('.numOfProj').textContent = num;
+}
+
 addProject(projects);
+updateNumber(projects.length)
