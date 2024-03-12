@@ -5,6 +5,11 @@ var projects = [
         link: "projects/Calculator/index.html"
     },
     {
+        name: "Word Guessing Game",
+        image: "images/Wordgame.png",
+        link: "projects/Word Guessing Game/index.html"
+    },
+    {
         name: "Story Generator",
         image: "images/story.png",
         link: "projects/Story Generator/index.html"
