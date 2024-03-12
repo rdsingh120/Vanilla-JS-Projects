@@ -5,6 +5,11 @@ var projects = [
         link: "projects/Calculator/index.html"
     },
     {
+        name: "Story Generator",
+        image: "images/story.png",
+        link: "projects/Story Generator/index.html"
+    },
+    {
         name: "Form Validation",
         image: "images/form.png",
         link: "projects/Form Validation/index.html"
