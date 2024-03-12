@@ -10,11 +10,6 @@ var projects = [
         link: "projects/Word Guessing Game/index.html"
     },
     {
-        name: "Story Generator",
-        image: "images/story.png",
-        link: "projects/Story Generator/index.html"
-    },
-    {
         name: "Form Validation",
         image: "images/form.png",
         link: "projects/Form Validation/index.html"
@@ -28,6 +23,11 @@ var projects = [
         name: "To-do List",
         image: "images/todo.png",
         link: "projects/To-do List/index.html"
+    },
+    {
+        name: "Story Generator",
+        image: "images/story.png",
+        link: "projects/Story Generator/index.html"
     },
     {
         name: "Lorem Ipsum Generator",
