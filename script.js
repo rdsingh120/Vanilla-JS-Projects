@@ -1,5 +1,10 @@
 var projects = [
     {
+        name: "Rock Paper Scissors",
+        image: "images/rps.png",
+        link: "projects/Rock Paper Scissors Game/index.html"
+    },
+    {
         name: "Calculator",
         image: "images/calculator.png",
         link: "projects/Calculator/index.html"
