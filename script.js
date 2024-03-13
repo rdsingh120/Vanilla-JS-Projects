@@ -5,6 +5,11 @@ var projects = [
         link: "projects/Rock Paper Scissors Game/index.html"
     },
     {
+        name: "Word Guessing Game",
+        image: "images/word-game.png",
+        link: "projects/Word Guessing Game/index.html"
+    },
+    {
         name: "Calculator",
         image: "images/calculator.png",
         link: "projects/Calculator/index.html"
