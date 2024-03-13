@@ -1,5 +1,4 @@
 var projects = [
-    
     {
         name: "Calculator",
         image: "images/calculator.png",
