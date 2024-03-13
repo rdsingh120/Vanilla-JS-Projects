@@ -25,6 +25,11 @@ var projects = [
         link: "projects/To-do List/index.html"
     },
     {
+        name: "Story Generator",
+        image: "images/story.png",
+        link: "projects/Story Generator/index.html"
+    },
+    {
         name: "Lorem Ipsum Generator",
         image: "images/lorem.png",
         link: "projects/Lorem Ipsum Generator/index.html"
