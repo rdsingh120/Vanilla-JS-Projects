@@ -1,5 +1,10 @@
 var projects = [
     {
+        name: "Calculator",
+        image: "images/calculator.png",
+        link: "projects/Calculator/index.html"
+    },
+    {
         name: "Rock Paper Scissors",
         image: "images/rps.png",
         link: "projects/Rock Paper Scissors Game/index.html"
@@ -9,11 +14,7 @@ var projects = [
         image: "images/word-game.png",
         link: "projects/Word Guessing Game/index.html"
     },
-    {
-        name: "Calculator",
-        image: "images/calculator.png",
-        link: "projects/Calculator/index.html"
-    },
+    
     {
         name: "Form Validation",
         image: "images/form.png",
