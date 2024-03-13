@@ -14,29 +14,23 @@ var result;
 
 
 rockOption.addEventListener('click', function() {
-    imageUpdate("rock");
-    document.querySelector('.round').textContent = game();
-    document.querySelector('.player-score').textContent = playerScore;
-    document.querySelector('.computer-score').textContent = computerScore;
-
-    
+    update("rock"); 
 });
 
 paperOption.addEventListener('click', function() {
-    imageUpdate("paper");
-    document.querySelector('.round').textContent = game();
+    update("paper");
 });
 
 scissorsOption.addEventListener('click', function() {
-    imageUpdate("scissors");
-    document.querySelector('.round').textContent = game();
+    update("scissors");
 });
 
-const imageUpdate = (className) => {
+const update = (className) => {
     playerChoiceImg.src = `images/${className}.png`;
     playerChoice = className;
     computerChoice = computerChoiceGenerator();
     computerChoiceImg.src = `images/${computerChoice}.png`;
+    document.querySelector('.round').textContent = game();
 }
 
 const computerChoiceGenerator = () => {
@@ -79,6 +73,8 @@ const game = () => {
     else {
         result = "Its a tie!";
     }
-
+    
+    document.querySelector('.player-score').textContent = playerScore;
+    document.querySelector('.computer-score').textContent = computerScore;
     return result;    
 };
