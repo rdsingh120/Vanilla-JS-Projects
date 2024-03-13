@@ -31,6 +31,8 @@ const update = (className) => {
     computerChoice = computerChoiceGenerator();
     computerChoiceImg.src = `images/${computerChoice}.png`;
     document.querySelector('.round').textContent = game();
+
+    setTimeout(clearScreen, 2000);
 }
 
 const computerChoiceGenerator = () => {
@@ -77,4 +79,10 @@ const game = () => {
     document.querySelector('.player-score').textContent = playerScore;
     document.querySelector('.computer-score').textContent = computerScore;
     return result;    
+};
+
+const clearScreen = () => {
+    document.querySelector('.round').textContent = "Choose => rock || paper || scissors";
+    playerChoiceImg.src = ``;
+    computerChoiceImg.src = ``;
 };
