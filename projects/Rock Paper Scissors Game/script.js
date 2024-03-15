@@ -50,9 +50,11 @@ const startGame = () => {
     let computerChoiceImg = document.createElement("img");
     computerChoiceImg.classList.add("computer-choice-img");
     computerChoiceDiv.appendChild(computerChoiceImg);
+
+    document.querySelector('.start-game').remove();
 };
 
-startGame();
+document.querySelector('.start-game').addEventListener('click', startGame);
 
 const clickFunc = (className) => {
     document.querySelector(`.${className}`).addEventListener('click', () => {
@@ -71,7 +73,7 @@ const update = (className) => {
     playerChoice = className;
     computerChoice = computerChoiceGenerator();
     document.querySelector('.computer-choice-img').src = `images/${computerChoice}.png`;
-    document.querySelector('.round').textContent = game();
+    document.querySelector('.title').textContent = game();
     setTimeout(clearScreen, 2000);
 }
 
@@ -122,7 +124,7 @@ const game = () => {
 };
 
 const clearScreen = () => {
-    document.querySelector('.round').textContent = "Choose => rock || paper || scissors";
+    document.querySelector('.title').textContent = "Choose again...";
     document.querySelector('.player-choice-img').src = ``;
     document.querySelector('.computer-choice-img').src = ``;
 };
