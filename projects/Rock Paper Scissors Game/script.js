@@ -6,7 +6,8 @@ var computerScore = 0;
 
 var result;
 
-const startGame = () => {
+
+const createPlayerColumn = () => {
     let playerColumn = document.createElement("div");
     playerColumn.classList.add("player", "col");
     document.querySelector('.row').appendChild(playerColumn);
@@ -28,7 +29,9 @@ const startGame = () => {
     let playerChoiceImg = document.createElement("img");
     playerChoiceImg.classList.add("player-choice-img");
     playerChoiceDiv.appendChild(playerChoiceImg);
+};
 
+const createComputerColumn = () => {
     let computerColumn = document.createElement("div");
     computerColumn.classList.add("computer", "col");
     document.querySelector('.row').appendChild(computerColumn);
@@ -50,7 +53,9 @@ const startGame = () => {
     let computerChoiceImg = document.createElement("img");
     computerChoiceImg.classList.add("computer-choice-img");
     computerChoiceDiv.appendChild(computerChoiceImg);
+};
 
+const createGameButtons = () => {
     let rockChoice = document.createElement("div");
     rockChoice.classList.add("choices", "rock");
     document.querySelector('.options').appendChild(rockChoice);
@@ -78,7 +83,13 @@ const startGame = () => {
     let scissorsImg = document.createElement("img");
     scissorsImg.src = "images/scissors.png"
     scissorsChoice.appendChild(scissorsImg);
+};
 
+const startGame = () => {
+    createPlayerColumn();
+    createComputerColumn();
+    createGameButtons(); 
+    
     document.querySelector('.start-game').remove();
 
     clickFunc("rock");
@@ -93,10 +104,6 @@ const clickFunc = (className) => {
         update(className)
     });
 };
-
-
-
-
 
 const update = (className) => {
     document.querySelector('.player-choice-img').src = `images/${className}.png`;
