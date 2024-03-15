@@ -1,6 +1,3 @@
-var rockOption = document.querySelector('.rock');
-var paperOption = document.querySelector('.paper');
-var scissorsOption = document.querySelector('.scissors');
 var playerChoiceImg = document.querySelector('.player-choice-img');
 var computerChoiceImg = document.querySelector('.computer-choice-img');
 
@@ -12,18 +9,17 @@ var computerScore = 0;
 
 var result;
 
+const clickFunc = (className) => {
+    document.querySelector(`.${className}`).addEventListener('click', () => {
+        update(className)
+    });
+};
 
-rockOption.addEventListener('click', function() {
-    update("rock"); 
-});
+clickFunc("rock");
+clickFunc("paper");
+clickFunc("scissors");
 
-paperOption.addEventListener('click', function() {
-    update("paper");
-});
 
-scissorsOption.addEventListener('click', function() {
-    update("scissors");
-});
 
 const update = (className) => {
     playerChoiceImg.src = `images/${className}.png`;
@@ -31,7 +27,6 @@ const update = (className) => {
     computerChoice = computerChoiceGenerator();
     computerChoiceImg.src = `images/${computerChoice}.png`;
     document.querySelector('.round').textContent = game();
-
     setTimeout(clearScreen, 2000);
 }
 
