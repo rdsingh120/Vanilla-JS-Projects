@@ -1,6 +1,3 @@
-var playerChoiceImg = document.querySelector('.player-choice-img');
-var computerChoiceImg = document.querySelector('.computer-choice-img');
-
 var playerChoice;
 var playerScore = 0;
 
@@ -8,6 +5,54 @@ var computerChoice;
 var computerScore = 0;
 
 var result;
+
+const startGame = () => {
+    let playerColumn = document.createElement("div");
+    playerColumn.classList.add("player", "col");
+    document.querySelector('.row').appendChild(playerColumn);
+
+    let playerScoreCard = document.createElement("h2");
+    playerScoreCard.classList.add("score-card");
+    playerScoreCard.textContent = "Your score: ";
+    playerColumn.appendChild(playerScoreCard);
+
+    let playerScoreSpan = document.createElement("span");
+    playerScoreSpan.classList.add("player-score");
+    playerScoreSpan.textContent = "0";
+    playerScoreCard.appendChild(playerScoreSpan);
+
+    let playerChoiceDiv = document.createElement("div");
+    playerChoiceDiv.classList.add("player-choice");
+    playerColumn.appendChild(playerChoiceDiv);
+
+    let playerChoiceImg = document.createElement("img");
+    playerChoiceImg.classList.add("player-choice-img");
+    playerChoiceDiv.appendChild(playerChoiceImg);
+
+    let computerColumn = document.createElement("div");
+    computerColumn.classList.add("computer", "col");
+    document.querySelector('.row').appendChild(computerColumn);
+
+    let computerScoreCard = document.createElement("h2");
+    computerScoreCard.classList.add("score-card");
+    computerScoreCard.textContent = "Computer's score: ";
+    computerColumn.appendChild(computerScoreCard);
+
+    let computerScoreSpan = document.createElement("span");
+    computerScoreSpan.classList.add("computer-score");
+    computerScoreSpan.textContent = "0";
+    computerScoreCard.appendChild(computerScoreSpan);
+
+    let computerChoiceDiv = document.createElement("div");
+    computerChoiceDiv.classList.add("computer-choice");
+    computerColumn.appendChild(computerChoiceDiv);
+
+    let computerChoiceImg = document.createElement("img");
+    computerChoiceImg.classList.add("computer-choice-img");
+    computerChoiceDiv.appendChild(computerChoiceImg);
+};
+
+startGame();
 
 const clickFunc = (className) => {
     document.querySelector(`.${className}`).addEventListener('click', () => {
@@ -22,10 +67,10 @@ clickFunc("scissors");
 
 
 const update = (className) => {
-    playerChoiceImg.src = `images/${className}.png`;
+    document.querySelector('.player-choice-img').src = `images/${className}.png`;
     playerChoice = className;
     computerChoice = computerChoiceGenerator();
-    computerChoiceImg.src = `images/${computerChoice}.png`;
+    document.querySelector('.computer-choice-img').src = `images/${computerChoice}.png`;
     document.querySelector('.round').textContent = game();
     setTimeout(clearScreen, 2000);
 }
@@ -78,6 +123,7 @@ const game = () => {
 
 const clearScreen = () => {
     document.querySelector('.round').textContent = "Choose => rock || paper || scissors";
-    playerChoiceImg.src = ``;
-    computerChoiceImg.src = ``;
+    document.querySelector('.player-choice-img').src = ``;
+    document.querySelector('.computer-choice-img').src = ``;
 };
+
