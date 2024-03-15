@@ -51,7 +51,39 @@ const startGame = () => {
     computerChoiceImg.classList.add("computer-choice-img");
     computerChoiceDiv.appendChild(computerChoiceImg);
 
+    let rockChoice = document.createElement("div");
+    rockChoice.classList.add("choices", "rock");
+    document.querySelector('.options').appendChild(rockChoice);
+
+    let rockImg = document.createElement("img");
+    rockImg.src = "images/rock.png"
+    rockChoice.appendChild(rockImg);
+
+    let secondDiv = document.createElement("div");
+    secondDiv.classList.add("second");
+    document.querySelector('.options').appendChild(secondDiv);
+
+    let paperChoice = document.createElement("div");
+    paperChoice.classList.add("choices", "paper");
+    secondDiv.appendChild(paperChoice);
+
+    let paperImg = document.createElement("img");
+    paperImg.src = "images/paper.png"
+    paperChoice.appendChild(paperImg);
+
+    let scissorsChoice = document.createElement("div");
+    scissorsChoice.classList.add("choices", "scissors");
+    secondDiv.appendChild(scissorsChoice);
+
+    let scissorsImg = document.createElement("img");
+    scissorsImg.src = "images/scissors.png"
+    scissorsChoice.appendChild(scissorsImg);
+
     document.querySelector('.start-game').remove();
+
+    clickFunc("rock");
+    clickFunc("paper");
+    clickFunc("scissors");
 };
 
 document.querySelector('.start-game').addEventListener('click', startGame);
@@ -62,9 +94,7 @@ const clickFunc = (className) => {
     });
 };
 
-clickFunc("rock");
-clickFunc("paper");
-clickFunc("scissors");
+
 
 
 

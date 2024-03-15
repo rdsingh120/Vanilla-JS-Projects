@@ -49,6 +49,7 @@
 .choices img {
     cursor: pointer;
     margin: 10px 20px;
+    width: 150px;
     transition: .3s;
 }
 
