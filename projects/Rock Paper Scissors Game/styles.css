@@ -15,12 +15,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 25px auto;
+    margin: 5px auto;
     max-width: 900px;
 }
 
-.round {
+.title {
     min-height: 40px;
+    font-size: 55px;
+    color: red;
 }
 
 .row {
@@ -28,6 +30,22 @@
     justify-content: space-between;
     margin-top: 30px;
     gap: 100px;
+}
+
+.start-game {
+    padding: 5px 10px;
+    background-color: white;
+    border: 2px solid rgb(0, 190, 237);
+    color: rgb(0, 190, 237);
+    margin-top: 250px;
+    font-size: 25px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.start-game:hover {
+    background-color: rgb(0, 190, 237);
+    color: white;
 }
 
 .score-card {
@@ -59,4 +77,26 @@
 
 .second {
     display: flex;
+}
+
+@media only screen and (max-width: 800px) {
+    * {
+        letter-spacing: 1px;
+    }
+
+    .title {
+        font-size: 35px;
+    }
+
+    .score-card {
+        font-size: 20px;
+    }
+
+    .choices img {
+        margin: 5px;
+        width: 100px;
+    }
+    .row img {
+        width: 150px;
+     }
 }
