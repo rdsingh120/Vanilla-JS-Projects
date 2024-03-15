@@ -33,6 +33,7 @@
 }
 
 .start-game {
+    cursor: pointer;
     padding: 5px 10px;
     background-color: white;
     border: 2px solid rgb(0, 190, 237);
