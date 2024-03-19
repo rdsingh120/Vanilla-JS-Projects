@@ -1,5 +1,10 @@
 var projects = [
     {
+        name: "Tic-Tac-Toe",
+        image: "images/tictactoe.png",
+        link: "projects/Tic-Tac-Toe/index.html"
+    },
+    {
         name: "Calculator",
         image: "images/calculator.png",
         link: "projects/Calculator/index.html"
