@@ -81,6 +81,9 @@ body {
     color: #ff8c00;
 }
 
+.delete {
+    color: rgb(255, 0, 0);
+}
 
 
 /* display lines */

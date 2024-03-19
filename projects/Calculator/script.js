@@ -1,5 +1,8 @@
 var displayText = document.querySelector('.display-text');
 var btn = document.querySelectorAll('.btn');
+var del = document.querySelector('.delete');
+var percent = document.querySelector('.percent');
+var decimal = document.querySelector('.decimal');
 var zero = document.querySelector('.zero');
 var one = document.querySelector('.one');
 var two = document.querySelector('.two');
@@ -33,6 +36,25 @@ for (var i = 0; i < btn.length; i++) {
         e.preventDefault();
     });
 }
+
+del.addEventListener('click', function(e) {
+    e.preventDefault();
+    clear();
+    str = displayText.textContent;
+    displayText.textContent = str.length > 1 ? str.substring(0, str.length - 1) : "0";
+});
+
+percent.addEventListener('click', function(e) {
+    e.preventDefault();
+    clear();
+    displayText.textContent += "/100";
+});
+
+decimal.addEventListener('click', function(e) {
+    e.preventDefault();
+    clear();
+    displayText.textContent += ".";
+});
 
 zero.addEventListener('click', function(e) {
     e.preventDefault();
@@ -111,17 +133,28 @@ minus.addEventListener('click', function(e) {
 multiply.addEventListener('click', function(e) {
     e.preventDefault();
     if (displayText.textContent) {
-        displayText.textContent += "×";
+        displayText.textContent += "*";
     }
 });
 
 divide.addEventListener('click', function(e) {
     e.preventDefault();
     if (displayText.textContent) {
-        displayText.textContent += "÷";
+        displayText.textContent += "/";
     }
 });
 
 equal.addEventListener('click', function(e) {
-    
+    let expression = displayText.textContent;    
+    let result;
+    try {
+        result = eval(expression);
+    }
+    catch (e) {
+        result = "Error";
+        setTimeout(function() {
+            displayText.textContent = 0;
+        }, 3000);
+    }
+    displayText.textContent = result;
 });
