@@ -9,6 +9,7 @@ clearBtn.addEventListener('click', function(e) {
     e.preventDefault();
     list.textContent = '';
     notifications("red", "List cleared");
+    clearBtn.style.visibility = "hidden";
 });
 
 const clearNotifications = () => {
@@ -48,8 +49,7 @@ const createTask = () => {
         delBtn.addEventListener('click', () => {
             li.remove();
             notifications("red", "Task Removed");        
-        });  
-        
+        });          
         p.addEventListener("click", function() {
             li.style.backgroundColor = "rgba(0, 125, 0, 0.2)"
             p.style.textDecoration = "line-through"
@@ -59,6 +59,7 @@ const createTask = () => {
                 li.remove()      
             }, 1000);
         });
+        clearBtn.style.visibility = "visible";
     }
     else { 
         notifications("red", "Please Enter Value");
