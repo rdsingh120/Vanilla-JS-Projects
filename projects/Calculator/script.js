@@ -156,5 +156,5 @@ equal.addEventListener('click', function(e) {
             displayText.textContent = 0;
         }, 3000);
     }
-    displayText.textContent = result.toFixed(2);
+    displayText.textContent = result;
 });
