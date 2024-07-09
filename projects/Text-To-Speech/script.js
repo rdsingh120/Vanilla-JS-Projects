@@ -16,8 +16,9 @@ speedInput.addEventListener('input', () => {
     playText(utterance.text.substring(currentChar))
 })
 const playText = (text) => {
-    if(speechSynthesis.speaking) return
+    
     if(speechSynthesis.paused && speechSynthesis.speaking) return speechSynthesis.resume()
+    if(speechSynthesis.speaking) return
     utterance.text = text
     utterance.rate = speedInput.value || 1
     utterance.addEventListener('end', () => {
