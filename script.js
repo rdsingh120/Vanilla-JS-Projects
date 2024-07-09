@@ -1,5 +1,10 @@
 var projects = [
     {
+        name: "Text-To-Speech",
+        image: "images/txt-to-speech.png",
+        link: "projects/Text-To-Speech/index.html"
+    },
+    {
         name: "Dog Gallery",
         image: "images/dog.png",
         link: "projects/Dog Gallery/index.html"
